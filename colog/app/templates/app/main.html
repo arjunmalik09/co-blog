@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Welcome</title>
+    {% load static %}
+    <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link href="{% static 'app/css/bootstrap-fluid-adj.css' %}" rel="stylesheet">
+  <link href="{% static 'app/css/bootstrap.min.css' %}" rel="stylesheet" media="screen">
+  <link href="{% static 'app/css/bootstrap-responsive.css' %}" rel="stylesheet">
+  <script src="{% static 'app/js/jquery-3.1.1.min.js' %}"></script>
+  <script src="{% static 'app/js/bootstrap.min.js' %}"></script>
+
+</head>
+<body>
+    <nav id="myNavbar" class="navbar navbar-default navbar-inverse navbar-fixed-top" role="navigation">
+
+        <div class="container-fluid">
+
+            <div class="navbar-header">
+
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbarCollapse">
+
+                    <span class="sr-only">Toggle navigation</span>
+
+                    <span class="icon-bar"></span>
+
+                    <span class="icon-bar"></span>
+
+                    <span class="icon-bar"></span>
+
+                </button>
+
+                <a class="navbar-brand" href="{% url 'main' %}">COLOG</a>
+
+            </div>
+
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+
+                <ul class="nav navbar-nav">
+        {% if user and not user.is_anonymous %}
+        
+
+                    <li class="active"><a href="{% url 'main' %}">Home</a></li>
+                    <li><a href="{% url 'about' %}" target="_blank">About</a></li>
+                    <li><a href="{% url 'contact' %}" target="_blank">Contact</a></li>
+                    
+                    <li text-align:right><a href="{% url 'main' %}">Pofile</a></li>
+                    <li text-align:right><a href="{% url 'blog_create' %}">Write Blog</a></li>
+                    <li text-align:right><a href="{% url 'logout' %}">Logout</a></li>      
+
+        
+        {% else %}
+            Welcome !
+            <li class="active"><a href="{% url 'main' %}">Home</a></li>
+                    <li><a href="{% url 'about' %}" target="_blank">About</a></li>
+                    <li><a href="{% url 'contact' %}" target="_blank">Contact</a></li>
+                    <li><a href="{% url 'login' %}">Login</a></li>
+                    <li><a href="{% url 'signup' %}">Signup</a></li>
+        {% endif %}
+                </ul>
+
+            </div>
+
+        </div>
+
+    </nav>
+
+<div class="jumbotron text-center">
+    <br /><br />
+  <h1>COLOG</h1>
+  <p> Career Counciling Blog</p>
+</div>
+{% include "messages_display.html" %}
+<div class="container">
+    
+    {% for item in list %}
+
+          <div class="row">
+          <a href="{{ item.0.get_absolute_url }}" class="list-group-item active">{{ item.0.title }}</a>
+
+              <!-- <p>{{ item.post.text }}</p> -->
+              <p>Likes: {{ item.0.likes }}</p>
+              <p>Published: {{ item.0.time }}</p>
+              <p>By: {{ item.1.first_name }} </p>
+              <!-- <p>Rank {{ item.2 }}</p> -->
+
+      </div>
+        <br />
+    {% endfor %}
+
+    <br />
+    <!-- <img src="{% static "bat.jpg" %}" alt="Picture of Rango" /> <!-- Images --> 
+</div>
+
+
+
+</body>
+</html>

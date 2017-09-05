@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Create a Blog</title>
+        {% load static %}
+    <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link href="{% static 'app/css/bootstrap-fluid-adj.css' %}" rel="stylesheet">
+  <link href="{% static 'app/css/bootstrap.min.css' %}" rel="stylesheet" media="screen">
+  <link href="{% static 'app/css/bootstrap-responsive.css' %}" rel="stylesheet">
+  <script src="{% static 'app/js/jquery-3.1.1.min.js' %}"></script>
+  <script src="{% static 'app/js/bootstrap.min.js' %}"></script>
+
+</head>
+<body>
+<nav id="myNavbar" class="navbar navbar-default navbar-inverse navbar-fixed-top" role="navigation">
+
+        <div class="container-fluid">
+
+            <div class="navbar-header">
+
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbarCollapse">
+
+                    <span class="sr-only">Toggle navigation</span>
+
+                    <span class="icon-bar"></span>
+
+                    <span class="icon-bar"></span>
+
+                    <span class="icon-bar"></span>
+
+                </button>
+
+                <a class="navbar-brand" href="{% url 'main' %}">COLOG</a>
+
+            </div>
+
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+
+                <ul class="nav navbar-nav">
+
+                    <li class="active"><a href="{% url 'main' %}">Home</a></li>
+                    <li><a href="{% url 'about' %}" target="_blank">About</a></li>
+                    <li><a href="{% url 'contact' %}" target="_blank">Contact</a></li>
+                    <li><a href="{% url 'signup' %}">Signout</a></li>
+                </ul>
+
+            </div>
+
+        </div>
+
+    </nav>
+<br /><br /><br />
+<div class="container">
+  <h2> Write Your Blog Here.</h2>
+  <div class="list-group">
+
+      <div class="form-blog">
+      <form class="span6" id="category_form" method="post" action="">
+            {% csrf_token %}
+          <div><h class="list-group-item"><p><b>Enter Title.</b></p> </h>
+          </div>
+          <input type="text" name="title" id="title" class="form-control input-sm chat-input" placeholder="title" />
+          </br>
+
+          <div><h class="list-group-item"><p><b>Which subjects/topics your study/training was about?</b></p> </h>
+          </div>
+          <input type="text" name="ques0" id="ques0" class="form-control input-sm chat-input" placeholder="answer" />
+          </br>
+
+          <div><h class="list-group-item"><p><b>Where did you study/get Training?</b></p> </h>
+          </div>
+          <input type="text" name="ques1" id="ques1" class="form-control input-sm chat-input" placeholder="answer" />
+          </br>
+          <div><h class="list-group-item"><p><b>Why did you choose this field(Background/Initial Motivation)?</b></p> </h>
+          </div>
+          <input type="text" name="ques2" id="ques2" class="form-control input-sm chat-input" placeholder="answer" />
+          </br>
+          <div><h class="list-group-item"><p><b>How did you get the Fianancial Assistance(Family Conditions/Scholorships)?</b></p> </h>
+          </div>
+          <input type="text" name="ques3" id="ques3" class="form-control input-sm chat-input" placeholder="answer" />
+          </br>
+          <div><h class="list-group-item"><p><b>How was the training/study/experience?</b></p> </h>
+          </div>
+          <input type="text" name="ques4" id="ques4" class="form-control input-sm chat-input" placeholder="answer" />
+          </br>
+          <div><h class="list-group-item"><p><b>What did you gain from this activity(skill set) & its impact on your current/future life?</b></p> </h>
+          </div>
+          <input type="text" name="ques5" id="ques5" class="form-control input-sm chat-input" placeholder="answer" />
+          </br>
+
+          <div><h class="list-group-item"><p><b>Satisfaction & suggestions for others.</b></p> </h>
+          </div>
+          <input type="text" name="ques6" id="ques6" class="form-control input-sm chat-input" placeholder="answer" />
+          </br>
+          
+          <div class="wrapper">
+              <span class="group-btn">
+                <button class="btn btn-primary" type="submit" name="submit">
+                    Submit <i class="fa fa-sign-in"></i>
+                    </button>
+            </span>
+          </div>
+        </form>
+      </div>
+  </div>
+</div>
+
+</body>
+</html>

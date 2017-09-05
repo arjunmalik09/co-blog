@@ -1,0 +1,13 @@
+c:\users\rishabh\documents\visual studio 2015\Projects\colog\colog\bin\Microsoft.PythonTools.WebRole.dll
+c:\users\rishabh\documents\visual studio 2015\Projects\colog\colog\obj\Debug\attach_server.py
+c:\users\rishabh\documents\visual studio 2015\Projects\colog\colog\obj\Debug\visualstudio_py_debugger.py
+c:\users\rishabh\documents\visual studio 2015\Projects\colog\colog\obj\Debug\visualstudio_py_repl.py
+c:\users\rishabh\documents\visual studio 2015\Projects\colog\colog\obj\Debug\visualstudio_py_util.py
+c:\users\rishabh\documents\visual studio 2015\Projects\colog\colog\obj\Debug\__init__.py
+c:\users\rishabh\documents\visual studio 2015\Projects\colog\colog\obj\Debug\__main__.py
+c:\users\rishabh\documents\visual studio 2015\Projects\colog\colog\bin\AzureSetup.cfg
+c:\users\rishabh\documents\visual studio 2015\Projects\colog\colog\bin\Microsoft.PythonTools.AzureSetup.exe
+c:\users\rishabh\documents\visual studio 2015\Projects\colog\colog\bin\Microsoft.PythonTools.AzureSetup.exe.config
+c:\users\rishabh\documents\visual studio 2015\Projects\colog\colog\bin\wfastcgi.py
+c:\users\rishabh\documents\visual studio 2015\Projects\colog\colog\obj\Debug\web.config
+c:\users\rishabh\documents\visual studio 2015\Projects\colog\colog\obj\Debug\web.debug.config

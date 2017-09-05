@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Welcome</title>
+    {% load static %}
+    <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link href="{% static 'app/css/bootstrap-fluid-adj.css' %}" rel="stylesheet">
+  <link href="{% static 'app/css/bootstrap.min.css' %}" rel="stylesheet" media="screen">
+  <link href="{% static 'app/css/bootstrap-responsive.css' %}" rel="stylesheet">
+  <script src="{% static 'app/js/jquery-3.1.1.min.js' %}"></script>
+  <script src="{% static 'app/js/bootstrap.min.js' %}"></script>
+
+</head>
+<body>
+    <nav id="myNavbar" class="navbar navbar-default navbar-inverse navbar-fixed-top" role="navigation">
+
+        <div class="container-fluid">
+
+            <div class="navbar-header">
+
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbarCollapse">
+
+                    <span class="sr-only">Toggle navigation</span>
+
+                    <span class="icon-bar"></span>
+
+                    <span class="icon-bar"></span>
+
+                    <span class="icon-bar"></span>
+
+                </button>
+
+                <a class="navbar-brand" href="{% url 'main' %}">COLOG</a>
+
+            </div>
+
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+
+                <ul class="nav navbar-nav">
+
+                    <li class="active"><a href="{% url 'main' %}">Home</a></li>
+                    <li><a href="{% url 'about' %}" target="_blank">About</a></li>
+                    <li><a href="{% url 'contact' %}" target="_blank">Contact</a></li>
+                    <li><a href="{% url 'blog' %}">Write Blog</a></li>
+                    <li><a href="{% url 'signup' %}">Signout</a></li>
+                </ul>
+
+            </div>
+
+        </div>
+
+    </nav>
+    <br />
+    <br />
+    <br />
+    <h><<b><center>Welcome User</center></b></h>
+    <br />
+    <br/>
+<div class="container">
+  <div class="row">
+      <a href="{% url 'desc' %}" class="list-group-item active">First blog</a>
+        <p>Lorem ipsum dolor..</p>
+        <p>Ut enim ad..</p>
+  </div>
+    <br />
+    <div class="row">
+      <a href="{% url 'desc' %}" class="list-group-item active">Second item</a>
+      <p>Lorem ipsum dolor..</p>
+      <p>Ut enim ad..</p>
+    </div>
+    <br />
+    <div class="row">
+      <a href="{% url 'desc' %}" class="list-group-item active">Third blog</a>
+      <p>Lorem ipsum dolor..</p>
+      <p>Ut enim ad..</p>
+  </div>
+    <br />
+    <!-- <img src="{% static "bat.jpg" %}" alt="Picture of Rango" /> <!-- Images --> -->
+</div>
+
+
+</body>
+</html>
